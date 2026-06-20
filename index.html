@@ -1,183 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Aminat Atohunse Portfolio</title>
+<meta charset="UTF-8">
+<title>Aminat Atohunse Portfolio</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: "Segoe UI", Arial, sans-serif;
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-            color: #e5e7eb;
-        }
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
-        header {
-            text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(135deg, #2563eb, #06b6d4, #10b981);
-            color: white;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        header h1 {
-            margin: 0;
-            font-size: 40px;
-        }
+body {
+    font-family: 'Inter', sans-serif;
+    background: radial-gradient(circle at top, #0b1220, #050814);
+    color: #e5e7eb;
+    overflow-x: hidden;
+}
 
-        header p {
-            font-size: 18px;
-            margin-top: 10px;
-        }
+/* BACKGROUND GLOW */
+body::before {
+    content: "";
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    background: #38bdf8;
+    filter: blur(150px);
+    opacity: 0.15;
+    top: -200px;
+    left: -200px;
+}
 
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 20px;
-        }
+/* HEADER */
+header {
+    text-align: center;
+    padding: 120px 20px 60px;
+}
 
-        .card {
-            background: #111827;
-            margin: 20px 0;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-        }
+header h1 {
+    font-size: 52px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #38bdf8, #22c55e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-        h2 {
-            color: #38bdf8;
-            border-left: 4px solid #38bdf8;
-            padding-left: 10px;
-        }
+header p {
+    margin-top: 10px;
+    font-size: 18px;
+    opacity: 0.8;
+}
 
-        ul {
-            line-height: 1.8;
-        }
+/* NAV */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 15px;
+    backdrop-filter: blur(10px);
+    background: rgba(10, 15, 30, 0.5);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
 
-        .profile {
-            text-align: center;
-            margin-top: -60px;
-        }
+nav a {
+    color: #e5e7eb;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
 
-        .profile img {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            border: 4px solid white;
-        }
+nav a:hover {
+    color: #38bdf8;
+}
 
-        .badge {
-            display: inline-block;
-            background: #22c55e;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 20px;
-            margin-top: 10px;
-            font-size: 12px;
-        }
+/* CONTAINER */
+section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 60px 20px;
+}
 
-        a {
-            color: #38bdf8;
-        }
-    </style>
+/* SECTION TITLE */
+h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #38bdf8;
+}
+
+/* GLASS CARD */
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 16px;
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: #38bdf8;
+}
+
+/* PROFILE */
+.profile {
+    text-align: center;
+    margin-top: -40px;
+}
+
+.profile img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 3px solid #38bdf8;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 40px;
+    opacity: 0.6;
+}
+</style>
 </head>
 
 <body>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#contact">Contact</a>
+</nav>
 
 <header>
     <h1>Aminat Atohunse</h1>
     <p>Geography Graduate | GIS & Remote Sensing | Environmental Data Science</p>
 </header>
 
-<div class="container">
-
-    <div class="profile">
-        <img src="profile.jpg" alt="profile">
-        <div class="badge">First Class Graduate • Best Graduating Student (2023/2024)</div>
-    </div>
-
-    <div class="card">
-        <h2>About Me</h2>
-        <p>
-            I am a First Class Geography graduate from the University of Ibadan and Best Graduating Student (2023/2024).
-            I specialize in GIS, remote sensing, and environmental data analysis, with a strong interest in climate
-            sustainability and spatial data science.
-        </p>
-    </div>
-
-    <div class="card">
-        <h2>Technical Skills</h2>
-        <ul>
-            <li>GIS (ArcGIS, QGIS)</li>
-            <li>Remote Sensing & Earth Observation</li>
-            <li>Python for Data Science & GIS</li>
-            <li>SPSS & Statistical Analysis</li>
-            <li>Data Visualization (Matplotlib, Seaborn)</li>
-            <li>HTML & CSS</li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h2>Projects</h2>
-        <ul>
-            <li>Urban Expansion & Agricultural Land Use Change (Akinyele LGA)</li>
-            <li>Waste Management and Environmental Analysis</li>
-            <li>GIS Mapping & Spatial Analysis Projects (Python + Folium)</li>
-            <li>Remote Sensing Image Processing</li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h2>Maps & Data Projects</h2>
-        <ul>
-            <li>Lagos Pollution Heatmap (Python + Folium)</li>
-            <li>Environmental Data Visualization</li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h2>Awards</h2>
-        <ul>
-            <li>Best Graduating Student – Geography (UI)</li>
-            <li>First Class Honours – University of Ibadan</li>
-            <li>Academic Excellence Award</li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h2>Certificates</h2>
-        <ul>
-            <li>DataCamp – Introduction to Python for Data Science</li>
-            <li>Cisco Python Essentials</li>
-            <li>Cisco HTML, CSS & JavaScript</li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:aminaatohunse@gmail.com">aminaatohunse@gmail.com</a></p>
-    </div>
-
+<div class="profile">
+    <img src="profile.jpg">
 </div>
 
-</body>
-</html><li>First Class Honours, B.Sc. Geography, University of Ibadan</li>
-<li>Winner, FATSSSA Inaugural Essay Competition on "The Role of AI in Governance"</li>
-<li>Award of Excellence for Academic Achievement</li>
-<li>Award of Service, Nigerian Universities Geography Students' Association (NUGSA)</li>
-</ul>
+<section id="about">
+    <h2>About</h2>
+    <div class="card">
+        I am a First Class Geography graduate from the University of Ibadan and Best Graduating Student (2023/2024).
+        I specialize in GIS, remote sensing, and environmental data science focused on climate and sustainability.
+    </div>
+</section>
 
-<h2>Current Learning Journey</h2>
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="card">
+        GIS • Python • GeoPandas • Remote Sensing • SPSS • Data Visualization • HTML/CSS
+    </div>
+</section>
 
-<ul>
-<li>Cisco Python Essentials</li>
-<li>Cisco JavaScript Essentials</li>
-<li>Cisco HTML and CSS</li>
-<li>Advanced GIS and Remote Sensing Applications</li>
-</ul>
+<section id="projects">
+    <h2>Projects</h2>
 
-<h2>Contact</h2>
+    <div class="card">
+        Lagos Air Pollution Heatmap (Python + Folium)
+    </div>
 
-<p>Email: aminaatohunse@gmail.com</p>
+    <div class="card">
+        Urban Land Use Change Analysis
+    </div>
+
+    <div class="card">
+        Environmental Data Visualization
+    </div>
+</section>
+
+<section id="certificates">
+    <h2>Certificates</h2>
+
+    <div class="card">DataCamp - Python for Data Science</div>
+    <div class="card">Cisco - Python Essentials</div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+        Email: aminaatohunse@gmail.com
+    </div>
+</section>
+
+<footer>
+    © 2026 Aminat Atohunse | GIS & Environmental Data Science Portfolio
+</footer>
 
 </body>
 </html>
